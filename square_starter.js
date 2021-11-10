@@ -40,7 +40,7 @@ function setup() {
   angleMode(DEGREES);
   setupStandardAxes()
   drawGridLines()
-  circle(3*STEP,2*STEP,10);
+
   
   
 }
