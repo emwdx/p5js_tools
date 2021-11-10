@@ -1,5 +1,6 @@
 // This is for a square canvas. A helper function moves the origin to the center of the canvas and optionally shows grid lines for a cartesian plane. This means that all transforms afterwards are with respect to this new coordinate system.
 
+// This is an edit to this file!
 
 let CANVAS_SIZE = 400;
 let GRID_SQUARES = 10;
