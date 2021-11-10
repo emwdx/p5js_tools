@@ -1,8 +1,5 @@
 // This is for a square canvas. A helper function moves the origin to the center of the canvas and optionally shows grid lines for a cartesian plane. This means that all transforms afterwards are with respect to this new coordinate system.
 
-// This is an edit to this file!
-
-// This is another edit, from another Evan!
 
 let CANVAS_SIZE = 400;
 let GRID_SQUARES = 10;
@@ -16,9 +13,16 @@ function setupStandardAxes(showLines){
   push()
   translate(CANVAS_SIZE/2,CANVAS_SIZE/2)
   scale(1.0,-1.0)
+  
+  
+}
+
+function drawGridLines(){
+  
+  fill(0,0,255)
+  circle(0,0,5)
   stroke(200)
-  if(showLines){
-    for(var i = -GRID_SQUARES;i<GRID_SQUARES;i++){
+  for(var i = -GRID_SQUARES;i<GRID_SQUARES;i++){
     
       line(i*STEP,-GRID_SQUARES/2*STEP,i*STEP,GRID_SQUARES/2*STEP)
       
@@ -28,21 +32,20 @@ function setupStandardAxes(showLines){
       line(-GRID_SQUARES/2*STEP,j*STEP,GRID_SQUARES/2*STEP,j*STEP)
       
   }
-    
-  }
-  
 }
+
 function setup() {
   createCanvas(CANVAS_SIZE, CANVAS_SIZE);
   background(220);
-  setupStandardAxes(true);
-  // Your code goes here.
-  
-  
+  angleMode(DEGREES);
+  setupStandardAxes()
+  drawGridLines()
+  circle(3*STEP,2*STEP,10);
   
   
 }
 
 function draw() {
+  
   
 }
